@@ -18,8 +18,8 @@ O que é o projeto VA'Alugar?
 
 Requisitos funcionais do projeto:
 - Para este MVP, implementaremos 3 funcionalidades em uma API:
-  1. Cadastrar novo usuário.
-  2. Listar canoas em determinado lugar.
+  1. Listar canoas disponíveis para locação em determinado lugar.
+  2. Registrar o interessa em reservar a canoa para uma determinada data.
   3. Postar um comentário relatando a experiência com a locação da canoa.
 - Para persistência dos dados, será usado um banco de dados SQLite. 
 
