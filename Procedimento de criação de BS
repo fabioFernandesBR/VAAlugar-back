@@ -1,0 +1,10 @@
+Usando o SQLite Studio
+
+Criação de Tabelas
+CREATE TABLE Usuario (
+    CPF      TEXT (11)    PRIMARY KEY
+                          CONSTRAINT [11-caracteres] CHECK (length(cpf) = 11),
+    Nome     TEXT (50)    NOT NULL,
+    telefone NUMERIC (11) NOT NULL
+);
+
