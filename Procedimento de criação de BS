@@ -1,10 +1,76 @@
-Usando o SQLite Studio
+Criação de Tabelas - Conforme exportado pelo BR Modelos :-)
+Attenzione - não rodou no SQLite Studio. :-(
 
-Criação de Tabelas
-CREATE TABLE Usuario (
-    CPF      TEXT (11)    PRIMARY KEY
-                          CONSTRAINT [11-caracteres] CHECK (length(cpf) = 11),
-    Nome     TEXT (50)    NOT NULL,
-    telefone NUMERIC (11) NOT NULL
+CREATE TABLE usuarios 
+( 
+ telefone INT PRIMARY KEY,  
+ nome VARCHAR(n),  
+); 
+
+CREATE TABLE canoas 
+( 
+ nome VARCHAR(n),  
+ tipo CHAR(n) NOT NULL,  
+ dono VARCHAR(n) NOT NULL,  
+ telefone VARCHAR(n) NOT NULL,  
+ idlocais INT,  
+ idcanoas INT PRIMARY KEY AUTO_INCREMENT,  
+); 
+
+CREATE TABLE locais 
+( 
+ cidade VARCHAR(n) NOT NULL,  
+ estado CHAR(n) NOT NULL,  
+ referencia VARCHAR(n) NOT NULL,  
+ bairro VARCHAR(n) NOT NULL,  
+ idlocais INT PRIMARY KEY AUTO_INCREMENT,  
+); 
+
+CREATE TABLE alugam 
+( 
+ data DATE,  
+ comentario VARCHAR(n),  
+ nota INT,  
+ telefone INT,  
+ idcanoas INT,  
+ reserva INT PRIMARY KEY AUTO_INCREMENT,  
+ CHECK (nota BETWEEN 1 AND 5)
+); 
+
+ALTER TABLE canoas ADD FOREIGN KEY(idlocais) REFERENCES locais (idlocais)
+ALTER TABLE alugam ADD FOREIGN KEY(telefone) REFERENCES usuarios (telefone)
+ALTER TABLE alugam ADD FOREIGN KEY(idcanoas) REFERENCES canoas (idcanoas)
+
+
+Conforme foi criado pelo SQLite Studio:
+
+CREATE TABLE usuarios (
+    telefone INTEGER PRIMARY KEY,
+    nome     TEXT    NOT NULL
 );
 
+CREATE TABLE locais (
+    idlocais   INTEGER PRIMARY KEY AUTOINCREMENT,
+    estado     TEXT    NOT NULL,
+    municipio  TEXT    NOT NULL,
+    bairro     TEXT    NOT NULL,
+    referencia TEXT    NOT NULL
+);
+
+CREATE TABLE canoas (
+    idcanoas INTEGER PRIMARY KEY AUTOINCREMENT,
+    nome     TEXT,
+    tipo     TEXT    NOT NULL,
+    dono     TEXT    NOT NULL,
+    telefone INTEGER NOT NULL,
+    idlocais INTEGER REFERENCES locais (idlocais) 
+);
+
+CREATE TABLE reservas (
+    reserva    INTEGER PRIMARY KEY AUTOINCREMENT,
+    usuario    INTEGER REFERENCES usuarios (telefone),
+    canoa      INTEGER REFERENCES canoas (idcanoas),
+    data       TEXT    NOT NULL,
+    comentario TEXT,
+    avaliacao  INTEGER CHECK (avaliacao BETWEEN 1 AND 5) 
+);
