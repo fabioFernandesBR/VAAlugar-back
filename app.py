@@ -33,7 +33,7 @@ def add_produto(form: ProdutoSchema):
     # Adiciona um novo Produto à base de dados
 
     # Retorna uma representação dos produtos e comentários associados.
-    """
+"""
     produto = Produto(
         nome=form.nome,
         quantidade=form.quantidade,
@@ -88,11 +88,11 @@ def get_canoas():
 @app.get('/produto', tags=[produto_tag],
          responses={"200": ProdutoViewSchema, "404": ErrorSchema})
 def get_produto(query: ProdutoBuscaSchema):
-    """
+"""
     # Faz a busca por um Produto a partir do id do produto
 
     # Retorna uma representação dos produtos e comentários associados.
-    """
+"""
     produto_nome = query.nome
     logger.debug(f"Coletando dados sobre produto #{produto_nome}")
     # criando conexão com a base
@@ -115,11 +115,11 @@ def get_produto(query: ProdutoBuscaSchema):
 @app.delete('/produto', tags=[produto_tag],
             responses={"200": ProdutoDelSchema, "404": ErrorSchema})
 def del_produto(query: ProdutoBuscaSchema):
-    """
+"""
     # Deleta um Produto a partir do nome de produto informado
 
     # Retorna uma mensagem de confirmação da remoção.
-    """
+"""
     produto_nome = unquote(unquote(query.nome))
     print(produto_nome)
     logger.debug(f"Deletando dados sobre produto #{produto_nome}")
@@ -144,11 +144,11 @@ def del_produto(query: ProdutoBuscaSchema):
 @app.post('/cometario', tags=[comentario_tag],
           responses={"200": ProdutoViewSchema, "404": ErrorSchema})
 def add_comentario(form: ComentarioSchema):
-    """
+"""
     # Adiciona de um novo comentário à um produtos cadastrado na base identificado pelo id
 
     # Retorna uma representação dos produtos e comentários associados.
-    """
+"""
     produto_id  = form.produto_id
     logger.debug(f"Adicionando comentários ao produto #{produto_id}")
     # criando conexão com a base
