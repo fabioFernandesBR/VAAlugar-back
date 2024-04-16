@@ -99,7 +99,7 @@ def get_locais():
         return apresenta_localidades(localidades), 200
     
 
-@app.get('/municipio', tags=[local_tag],
+@app.get('/cidades', tags=[local_tag],
          responses={"200": SchemaListagemLocalidades, "404": SchemaMensagemErro})
 def get_localidades_por_tipo(query: SchemaBuscaLocalidadePorMunicipio):
     """
