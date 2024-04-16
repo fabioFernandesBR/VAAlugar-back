@@ -15,7 +15,7 @@ class Canoa(Base):
     # Aqui está sendo definido a coluna 'local' que vai guardar
     # a referencia a localidade, a chave estrangeira que relaciona
     # uma canoa ao seu local.
-    local = Column(Integer, ForeignKey("locais.idlocais"), nullable=True)
+    local = Column("idlocais", Integer, ForeignKey("locais.idlocais"), nullable=True)
 
     def __init__(self, nome, tipo, dono, telefone, local):
         """

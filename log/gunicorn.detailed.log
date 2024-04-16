@@ -1,30 +1,19 @@
-[2024-04-16 16:35:26,266] INFO _log() L96   [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5000
- * Running on http://192.168.0.18:5000 - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-16 16:35:26,267] INFO _log() L96   [33mPress CTRL+C to quit[0m - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-16 16:35:41,316] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:35:41] "[32mGET / HTTP/1.1[0m" 302 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-16 16:35:41,390] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:35:41] "GET /openapi/ HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-16 16:35:41,640] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:35:41] "GET /openapi/static/images/redoc.svg HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-16 16:35:41,652] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:35:41] "GET /openapi/static/images/swagger.svg HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-16 16:35:41,657] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:35:41] "GET /openapi/static/images/rapidoc.svg HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-16 16:35:43,143] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:35:43] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-16 16:35:43,184] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:35:43] "GET /openapi/static/css/swagger-ui.css HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-16 16:35:43,263] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:35:43] "GET /openapi/static/js/swagger-ui-standalone-preset.js HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-16 16:35:43,400] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:35:43] "GET /openapi/static/js/swagger-ui-bundle.js HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-16 16:35:43,634] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:35:43] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-16 16:35:54,131] ERROR log_exception() L838  Exception on /canoas [GET] - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\flask\app.py L838 
+[2024-04-16 16:41:02,169] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:41:02] "GET /openapi/ HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 16:41:02,365] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:41:02] "[36mGET /openapi/static/images/redoc.svg HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 16:41:02,393] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:41:02] "[36mGET /openapi/static/images/swagger.svg HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 16:41:02,403] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:41:02] "[36mGET /openapi/static/images/rapidoc.svg HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 16:41:08,522] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:41:08] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 16:41:08,550] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:41:08] "[36mGET /openapi/static/css/swagger-ui.css HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 16:41:08,550] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:41:08] "[36mGET /openapi/static/js/swagger-ui-bundle.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 16:41:08,550] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:41:08] "[36mGET /openapi/static/js/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 16:41:08,872] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:41:08] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 16:41:15,801] ERROR log_exception() L838  Exception on /canoas [GET] - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\flask\app.py L838 
 Traceback (most recent call last):
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\clsregistry.py", line 515, in _resolve_name
-    rval = d[token]
-           ~^^^^^^^
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\util\_collections.py", line 344, in __missing__
-    self[key] = val = self.creator(key)
-                      ^^^^^^^^^^^^^^^^^
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\clsregistry.py", line 483, in _access_cls
-    return self.fallback[key]
-           ~~~~~~~~~~~~~^^^^^
-KeyError: 'Canoas'
+  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such column: canoas.local
 
 The above exception was the direct cause of the following exception:
 
@@ -49,39 +38,44 @@ Traceback (most recent call last):
                ^^^^^^^^^^^^^^^^^^^
   File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\app.py", line 77, in get_canoas
     canoas = session.query(Canoa).all()
-             ^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\session.py", line 2896, in query
-    return self._query_cls(entities, self, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\query.py", line 275, in __init__
-    self._set_entities(entities)
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\query.py", line 288, in _set_entities
-    coercions.expect(
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\sql\coercions.py", line 389, in expect
-    insp._post_inspect
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 1253, in __get__
-    obj.__dict__[self.__name__] = result = self.fget(obj)
-                                           ^^^^^^^^^^^^^^
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\mapper.py", line 2711, in _post_inspect
-    self._check_configure()
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\mapper.py", line 2388, in _check_configure
-    _configure_registries({self.registry}, cascade=True)
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\mapper.py", line 4203, in _configure_registries
-    _do_configure_registries(registries, cascade)
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\mapper.py", line 4244, in _do_configure_registries
-    mapper._post_configure_properties()
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\mapper.py", line 2405, in _post_configure_properties
-    prop.init()
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\interfaces.py", line 584, in init
-    self.do_init()
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\relationships.py", line 1642, in do_init
-    self._setup_entity()
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\relationships.py", line 1854, in _setup_entity
-    self._clsregistry_resolve_name(argument)(),
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\clsregistry.py", line 519, in _resolve_name
-    self._raise_for_name(name, err)
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\clsregistry.py", line 500, in _raise_for_name
-    raise exc.InvalidRequestError(
-sqlalchemy.exc.InvalidRequestError: When initializing mapper Mapper[Localidade(locais)], expression 'Canoas' failed to locate a name ('Canoas'). If this is a class name, consider adding this relationship() to the <class 'model.localidade.Localidade'> class after both dependent classes have been defined.
-[2024-04-16 16:35:54,135] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:35:54] "[35m[1mGET /canoas HTTP/1.1[0m" 500 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\query.py", line 2673, in all
+    return self._iter().all()  # type: ignore
+           ^^^^^^^^^^^^
+  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\query.py", line 2827, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\session.py", line 2306, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\session.py", line 2191, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1422, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\sql\elements.py", line 514, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1644, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1850, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1990, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\engine\base.py", line 2357, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: canoas.local
+[SQL: SELECT canoas.idcanoas AS canoas_idcanoas, canoas.nome AS canoas_nome, canoas.tipo AS canoas_tipo, canoas.dono AS canoas_dono, canoas.telefone AS canoas_telefone, canoas.local AS canoas_local 
+FROM canoas]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2024-04-16 16:41:15,817] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:41:15] "[35m[1mGET /canoas HTTP/1.1[0m" 500 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
