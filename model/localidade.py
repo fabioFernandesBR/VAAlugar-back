@@ -1,7 +1,6 @@
-from sqlalchemy import Column, String, Integer, DateTime, Float
+from sqlalchemy import Column, String, Integer
 from sqlalchemy.orm import relationship
-from datetime import datetime
-from typing import Union
+
 
 from  model import Base
 
@@ -17,7 +16,7 @@ class Localidade(Base):
     # Definição do relacionamento entre uma canoa e o local onde ela fica.
     # Esse relacionamento não está na tabela "locais", mas a tabela "canoas" faz uma referência à tabela locais, por meio de uma chave estrangeira.
     # O SQLAlchemy fará esse relacionamento.
-    canoas = relationship("Canoas")
+    canoas = relationship("Canoa")
 
     def __init__(self, estado:str, municipio:str, bairro:str, referencia:str):
         """

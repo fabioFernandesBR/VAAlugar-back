@@ -64,7 +64,7 @@ def add_produto(form: ProdutoSchema):
 """
 
 @app.get('/canoas', tags=[canoa_tag],
-         responses={"200": SchemaListagemCanoas, "404": ErrorSchema})
+         responses={"200": SchemaListagemCanoas})
 def get_canoas():
     """Faz a busca por TODAS AS CANOAS CADASTRADAS
 
