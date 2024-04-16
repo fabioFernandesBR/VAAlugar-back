@@ -50,7 +50,7 @@ def get_canoas():
         return apresenta_canoas(canoas), 200
 
 
-@app.get('/canoa_por_tipo', tags=[canoa_tag],
+@app.get('/tipo', tags=[canoa_tag],
          responses={"200": SchemaListagemCanoas, "404": SchemaMensagemErro})
 def get_canoas_por_tipo(query: SchemaBuscaCanoaPorTipo):
     """
@@ -78,7 +78,7 @@ def get_canoas_por_tipo(query: SchemaBuscaCanoaPorTipo):
 
 @app.get('/locais', tags=[local_tag],
          responses={"200": SchemaListagemLocalidades, "404": SchemaMensagemErro})
-def get_canoas():
+def get_locais():
     """Faz a busca por TODOS OS LOCAIS CADASTRADOS
 
     Retorna uma representação da listagem de locais.
@@ -93,7 +93,33 @@ def get_canoas():
         # se não há locais cadastrados
         return {"locais": []}, 200
     else:
-        logger.debug(f"%d locais encontrados" % len(locais))
+        logger.debug(f"%d locais encontrados" % len(localidades))
         # retorna a representação dos locais / localidades
         print(localidades)
+        return apresenta_localidades(localidades), 200
+    
+
+@app.get('/municipio', tags=[local_tag],
+         responses={"200": SchemaListagemLocalidades, "404": SchemaMensagemErro})
+def get_localidades_por_tipo(query: SchemaBuscaLocalidadePorMunicipio):
+    """
+    # Faz a busca por localidades a partir do MUNICIPIO
+
+    # Retorna uma representação dos locais onde haja canoas disponíveis em determinado município.
+    """
+    cidade = query.municipio
+    logger.debug(f"Coletando dados sobre canoas #{cidade}")
+    # criando conexão com a base
+    session = Session()
+    # fazendo a busca
+    localidades = session.query(Localidade).filter(Localidade.municipio == cidade).all() ###AQUI
+
+    if not localidades:
+        # se o local não foi encontrado
+        error_msg = "Não foram encontrados locais para remar neste município :/"
+        logger.warning(f"Erro ao buscar município '{cidade}', {error_msg}")
+        return {"message": error_msg}, 404
+    else:
+        logger.debug(f"Localidades encontradas em: '{cidade}'")
+        # retorna a representação de produto
         return apresenta_localidades(localidades), 200
