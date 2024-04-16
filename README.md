@@ -31,3 +31,11 @@ CATALOGO DE REQUISIÇOES E RESPOSTAS
 3. Usuario informa seu nome e numero de telefone. Metodo: GET. API retorna LISTA de transacoes realizadas com estes dados.
 4. Usuario escolhe uma transacao e escreve seu comentario. Metodo: POST. API atualiza tabela com estes dados.
 
+ESTRUTURA DA PASTA
+- subpasta database: armazenar o banco de dados SQLite
+- subpasta model: modelos SQLAlchemy
+- subpasta schemas: modelos Pydantic para comunicação com camada cliente
+- arquivo app.py, nome default utilizado pelo flask
+- arquivo README.md
+- outros arquivos para ajuda e documentação: Modelo de Entidades e Relacionamentos.pdf, Modelo Logico VAAlugar 0.1.pdf e Procedimento de criação de BD.
+
