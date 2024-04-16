@@ -1,93 +1,52 @@
-[2024-04-16 16:35:26,266] INFO _log() L96   [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+[2024-04-16 16:43:22,775] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:43:22] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 16:43:22,828] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:43:22] "[36mGET /openapi/static/images/swagger.svg HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 16:43:31,662] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:43:31] "GET /canoas HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 16:44:10,051] INFO _log() L96   [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
  * Running on http://192.168.0.18:5000 - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-16 16:35:26,267] INFO _log() L96   [33mPress CTRL+C to quit[0m - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-16 16:35:41,316] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:35:41] "[32mGET / HTTP/1.1[0m" 302 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-16 16:35:41,390] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:35:41] "GET /openapi/ HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-16 16:35:41,640] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:35:41] "GET /openapi/static/images/redoc.svg HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-16 16:35:41,652] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:35:41] "GET /openapi/static/images/swagger.svg HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-16 16:35:41,657] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:35:41] "GET /openapi/static/images/rapidoc.svg HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-16 16:35:43,143] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:35:43] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-16 16:35:43,184] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:35:43] "GET /openapi/static/css/swagger-ui.css HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-16 16:35:43,263] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:35:43] "GET /openapi/static/js/swagger-ui-standalone-preset.js HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-16 16:35:43,400] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:35:43] "GET /openapi/static/js/swagger-ui-bundle.js HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-16 16:35:43,634] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:35:43] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-16 16:35:54,131] ERROR log_exception() L838  Exception on /canoas [GET] - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\flask\app.py L838 
-Traceback (most recent call last):
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\clsregistry.py", line 515, in _resolve_name
-    rval = d[token]
-           ~^^^^^^^
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\util\_collections.py", line 344, in __missing__
-    self[key] = val = self.creator(key)
-                      ^^^^^^^^^^^^^^^^^
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\clsregistry.py", line 483, in _access_cls
-    return self.fallback[key]
-           ~~~~~~~~~~~~~^^^^^
-KeyError: 'Canoas'
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\flask\app.py", line 865, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\flask_openapi3\scaffold.py", line 117, in view_func
-    response = func(**func_kwargs)
-               ^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\app.py", line 77, in get_canoas
-    canoas = session.query(Canoa).all()
-             ^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\session.py", line 2896, in query
-    return self._query_cls(entities, self, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\query.py", line 275, in __init__
-    self._set_entities(entities)
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\query.py", line 288, in _set_entities
-    coercions.expect(
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\sql\coercions.py", line 389, in expect
-    insp._post_inspect
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 1253, in __get__
-    obj.__dict__[self.__name__] = result = self.fget(obj)
-                                           ^^^^^^^^^^^^^^
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\mapper.py", line 2711, in _post_inspect
-    self._check_configure()
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\mapper.py", line 2388, in _check_configure
-    _configure_registries({self.registry}, cascade=True)
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\mapper.py", line 4203, in _configure_registries
-    _do_configure_registries(registries, cascade)
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\mapper.py", line 4244, in _do_configure_registries
-    mapper._post_configure_properties()
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\mapper.py", line 2405, in _post_configure_properties
-    prop.init()
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\interfaces.py", line 584, in init
-    self.do_init()
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\relationships.py", line 1642, in do_init
-    self._setup_entity()
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\relationships.py", line 1854, in _setup_entity
-    self._clsregistry_resolve_name(argument)(),
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\clsregistry.py", line 519, in _resolve_name
-    self._raise_for_name(name, err)
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\clsregistry.py", line 500, in _raise_for_name
-    raise exc.InvalidRequestError(
-sqlalchemy.exc.InvalidRequestError: When initializing mapper Mapper[Localidade(locais)], expression 'Canoas' failed to locate a name ('Canoas'). If this is a class name, consider adding this relationship() to the <class 'model.localidade.Localidade'> class after both dependent classes have been defined.
-[2024-04-16 16:35:54,135] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:35:54] "[35m[1mGET /canoas HTTP/1.1[0m" 500 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-16 16:40:59,091] INFO _log() L96   [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+[2024-04-16 16:44:10,052] INFO _log() L96   [33mPress CTRL+C to quit[0m - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 16:44:29,268] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:44:29] "[32mGET / HTTP/1.1[0m" 302 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 16:44:29,315] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:44:29] "GET /openapi/ HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 16:44:29,512] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:44:29] "[36mGET /openapi/static/images/redoc.svg HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 16:44:29,537] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:44:29] "[36mGET /openapi/static/images/swagger.svg HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 16:44:29,537] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:44:29] "[36mGET /openapi/static/images/rapidoc.svg HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 16:44:44,772] INFO _log() L96   [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
  * Running on http://192.168.0.18:5000 - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-16 16:40:59,092] INFO _log() L96   [33mPress CTRL+C to quit[0m - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-16 16:41:02,126] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:41:02] "[32mGET / HTTP/1.1[0m" 302 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 16:44:44,780] INFO _log() L96   [33mPress CTRL+C to quit[0m - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 16:44:51,017] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:44:51] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 16:44:51,191] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:44:51] "[36mGET /openapi/static/js/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 16:44:51,213] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:44:51] "[36mGET /openapi/static/js/swagger-ui-bundle.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 16:44:51,221] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:44:51] "[36mGET /openapi/static/css/swagger-ui.css HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 16:44:51,445] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:44:51] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 16:45:02,715] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:45:02] "GET /canoas HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 16:54:13,363] INFO _log() L96   [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.18:5000 - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 16:54:13,364] INFO _log() L96   [33mPress CTRL+C to quit[0m - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 16:54:20,267] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:54:20] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 16:54:20,474] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:54:20] "[36mGET /openapi/static/css/swagger-ui.css HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 16:54:20,518] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:54:20] "[36mGET /openapi/static/js/swagger-ui-bundle.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 16:54:20,528] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:54:20] "[36mGET /openapi/static/js/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 16:54:20,600] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:54:20] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 16:54:20,661] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:54:20] "[36mGET /openapi/static/images/swagger.svg HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 16:54:34,842] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 16:54:34] "GET /canoas HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 17:05:40,093] INFO _log() L96   [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.18:5000 - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 17:05:40,103] INFO _log() L96   [33mPress CTRL+C to quit[0m - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 17:05:48,869] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 17:05:48] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 17:05:49,041] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 17:05:49] "[36mGET /openapi/static/js/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 17:05:49,056] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 17:05:49] "[36mGET /openapi/static/js/swagger-ui-bundle.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 17:05:49,076] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 17:05:49] "[36mGET /openapi/static/css/swagger-ui.css HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 17:05:49,198] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 17:05:49] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 17:05:49,208] INFO _log() L96   127.0.0.1 - - [16/Apr/2024 17:05:49] "[36mGET /openapi/static/images/swagger.svg HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 17:07:02,818] INFO _log() L96   [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.18:5000 - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-16 17:07:02,828] INFO _log() L96   [33mPress CTRL+C to quit[0m - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  

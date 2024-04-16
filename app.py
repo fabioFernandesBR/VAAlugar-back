@@ -49,7 +49,7 @@ def get_canoas():
         return apresenta_canoas(canoas), 200
 
 
-@app.get('/canoas', tags=[canoa_tag],
+@app.get('/canoa_por_tipo', tags=[canoa_tag],
          responses={"200": SchemaListagemCanoas, "404": SchemaMensagemErro})
 def get_canoas_por_tipo(query: SchemaBuscaCanoaPorTipo):
     """

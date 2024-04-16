@@ -3,8 +3,6 @@ from typing import Optional, List
 from model.canoa import Canoa
 
 
-# from schemas import ComentarioSchema
-
 class SchemaBuscaCanoaPorTipo(BaseModel):
     """ Define como deve ser a estrutura que representa a busca. 
         Que será feita apenas com base no TIPO de canoa.
@@ -41,7 +39,7 @@ class SchemaVisualizacaoCanoas(BaseModel):
 
 def apresenta_canoa(canoa: Canoa):
     """ Retorna uma representação do produto seguindo o schema definido em
-        ProdutoViewSchema.
+        SchemaListagemCanoas.
     """
     return {
         "id": canoa.id,
@@ -55,7 +53,7 @@ def apresenta_canoa(canoa: Canoa):
 
 def apresenta_canoas(canoas: List[Canoa]):
     """ Retorna uma representação da canoa seguindo o schema definido em
-        SchemaVisualizacaoCanoas.
+        SchemaListagemCanoas.
     """
     result = []
     for canoa in canoas:
