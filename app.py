@@ -17,6 +17,7 @@ CORS(app)
 # definindo tags
 home_tag = Tag(name="Documentação", description="Seleção de documentação: Swagger, Redoc ou RapiDoc")
 canoa_tag = Tag(name="Canoa", description="Busca de canoas")
+local_tag = Tag(name = "Local", description = "Busca de locais para remar!")
 #comentario_tag = Tag(name="Comentario", description="Adição de um comentário à um produtos cadastrado na base")
 
 
@@ -75,3 +76,24 @@ def get_canoas_por_tipo(query: SchemaBuscaCanoaPorTipo):
         return apresenta_canoas(canoas), 200
 
 
+@app.get('/locais', tags=[local_tag],
+         responses={"200": SchemaListagemLocalidades, "404": SchemaMensagemErro})
+def get_canoas():
+    """Faz a busca por TODOS OS LOCAIS CADASTRADOS
+
+    Retorna uma representação da listagem de locais.
+    """
+    logger.debug(f"Coletando locais ")
+    # criando conexão com a base
+    session = Session()
+    # fazendo a busca
+    localidades = session.query(Localidade).all()
+
+    if not localidades:
+        # se não há locais cadastrados
+        return {"locais": []}, 200
+    else:
+        logger.debug(f"%d locais encontrados" % len(locais))
+        # retorna a representação dos locais / localidades
+        print(localidades)
+        return apresenta_localidades(localidades), 200
