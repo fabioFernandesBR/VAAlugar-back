@@ -7,6 +7,7 @@ from sqlalchemy.exc import IntegrityError
 from model import Session, Canoa, Localidade
 from logger import logger
 from schemas import *
+
 from flask_cors import CORS
 
 info = Info(title="VAAlugar", version="0.1.0")

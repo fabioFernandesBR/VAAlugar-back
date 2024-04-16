@@ -39,7 +39,7 @@ class SchemaVisualizacaoCanoas(BaseModel):
     telefone: int = 21999999998 
     local: int = 1
 
-def apresenta_canoa(canoa: Produto):
+def apresenta_canoa(canoa: Canoa):
     """ Retorna uma representação do produto seguindo o schema definido em
         ProdutoViewSchema.
     """
