@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
 
-class ErrorSchema(BaseModel):
+class SchemaMensagemErro(BaseModel):
     """ Define como uma mensagem de erro será representada
     """
-    mesage: str
+    message: str = "Algo deu ruim"
