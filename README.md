@@ -23,3 +23,11 @@ Requisitos funcionais do projeto:
   3. Postar um comentário relatando a experiência com a locação da canoa.
 - Para persistência dos dados, será usado um banco de dados SQLite. 
 
+
+CATALOGO DE REQUISIÇOES E RESPOSTAS
+
+1. Usuario busca canoas disponíveis por Município. Metodo: GET. API retorna LISTA de canoas disponiveis no municipio escolhido.
+2. Usuario escolhe uma canoa da lista, informa uma data, seu nome e numero de telefone. Metodo: POST. API registra estas informacoes na tabela de transacoes.
+3. Usuario informa seu nome e numero de telefone. Metodo: GET. API retorna LISTA de transacoes realizadas com estes dados.
+4. Usuario escolhe uma transacao e escreve seu comentario. Metodo: POST. API atualiza tabela com estes dados.
+
