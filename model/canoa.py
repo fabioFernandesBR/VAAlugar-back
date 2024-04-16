@@ -2,7 +2,7 @@ from sqlalchemy import Column, String, Integer, DateTime, ForeignKey
 from  model import Base
 
 
-class Canoas(Base):
+class Canoa(Base):
     __tablename__ = 'canoas'
 
     id = Column("idcanoas", Integer, primary_key = True)
