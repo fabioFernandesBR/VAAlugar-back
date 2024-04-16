@@ -37,5 +37,6 @@ ESTRUTURA DA PASTA
 - subpasta schemas: modelos Pydantic para comunicação com camada cliente
 - arquivo app.py, nome default utilizado pelo flask
 - arquivo README.md
+- arquivo requirements.txt
 - outros arquivos para ajuda e documentação: Modelo de Entidades e Relacionamentos.pdf, Modelo Logico VAAlugar 0.1.pdf e Procedimento de criação de BD.
 
