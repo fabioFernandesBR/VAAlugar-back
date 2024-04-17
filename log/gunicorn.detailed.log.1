@@ -1,86 +1,72 @@
-[2024-04-17 19:30:54,904] INFO _log() L96    * Restarting with stat - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-17 19:31:07,315] INFO _log() L96   127.0.0.1 - - [17/Apr/2024 19:31:07] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-17 19:31:07,465] INFO _log() L96   127.0.0.1 - - [17/Apr/2024 19:31:07] "[36mGET /openapi/static/js/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-17 19:31:07,491] INFO _log() L96   127.0.0.1 - - [17/Apr/2024 19:31:07] "[36mGET /openapi/static/js/swagger-ui-bundle.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-17 19:31:07,504] INFO _log() L96   127.0.0.1 - - [17/Apr/2024 19:31:07] "[36mGET /openapi/static/css/swagger-ui.css HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-17 19:31:07,626] INFO _log() L96   127.0.0.1 - - [17/Apr/2024 19:31:07] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-17 19:31:07,761] INFO _log() L96   127.0.0.1 - - [17/Apr/2024 19:31:07] "[36mGET /openapi/static/images/swagger.svg HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-17 19:31:15,569] ERROR log_exception() L838  Exception on /por-municipio [GET] - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\flask\app.py L838 
-Traceback (most recent call last):
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\relationships.py", line 2423, in _determine_joins
-    self.primaryjoin = join_condition(
-                       ^^^^^^^^^^^^^^^
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\sql\util.py", line 123, in join_condition
-    return Join._join_condition(
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\sql\selectable.py", line 1343, in _join_condition
-    cls._joincond_trim_constraints(
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\sql\selectable.py", line 1488, in _joincond_trim_constraints
-    raise exc.AmbiguousForeignKeysError(
-sqlalchemy.exc.AmbiguousForeignKeysError: Can't determine join between 'locais' and 'canoas'; tables have more than one foreign key constraint relationship between them. Please specify the 'onclause' of this join explicitly.
-
-The above exception was the direct cause of the following exception:
-
+[2024-04-17 20:05:14,441] INFO _log() L96   [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.18:5000 - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-17 20:05:14,445] INFO _log() L96   [33mPress CTRL+C to quit[0m - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-17 20:05:14,449] INFO _log() L96    * Restarting with stat - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-17 20:05:19,202] INFO _log() L96   127.0.0.1 - - [17/Apr/2024 20:05:19] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-17 20:05:19,392] INFO _log() L96   127.0.0.1 - - [17/Apr/2024 20:05:19] "[36mGET /openapi/static/js/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-17 20:05:19,415] INFO _log() L96   127.0.0.1 - - [17/Apr/2024 20:05:19] "[36mGET /openapi/static/css/swagger-ui.css HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-17 20:05:19,446] INFO _log() L96   127.0.0.1 - - [17/Apr/2024 20:05:19] "[36mGET /openapi/static/js/swagger-ui-bundle.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-17 20:05:19,558] INFO _log() L96   127.0.0.1 - - [17/Apr/2024 20:05:19] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-17 20:05:19,566] INFO _log() L96   127.0.0.1 - - [17/Apr/2024 20:05:19] "[36mGET /openapi/static/images/swagger.svg HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-17 20:05:28,173] ERROR log_exception() L838  Exception on /reserva-telefone [GET] - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\flask\app.py L838 
 Traceback (most recent call last):
   File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
     response = self.full_dispatch_request()
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\flask\app.py", line 865, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\flask_openapi3\scaffold.py", line 117, in view_func
-    response = func(**func_kwargs)
-               ^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\app.py", line 95, in get_canoas_por_municipio
-    canoas = session.query(Canoa).join(Localidade).filter(Localidade.municipio == local_buscado).all()
-             ^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\session.py", line 2896, in query
-    return self._query_cls(entities, self, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\query.py", line 275, in __init__
-    self._set_entities(entities)
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\query.py", line 288, in _set_entities
-    coercions.expect(
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\sql\coercions.py", line 389, in expect
-    insp._post_inspect
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 1253, in __get__
-    obj.__dict__[self.__name__] = result = self.fget(obj)
-                                           ^^^^^^^^^^^^^^
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\mapper.py", line 2711, in _post_inspect
-    self._check_configure()
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\mapper.py", line 2388, in _check_configure
-    _configure_registries({self.registry}, cascade=True)
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\mapper.py", line 4203, in _configure_registries
-    _do_configure_registries(registries, cascade)
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\mapper.py", line 4244, in _do_configure_registries
-    mapper._post_configure_properties()
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\mapper.py", line 2405, in _post_configure_properties
-    prop.init()
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\interfaces.py", line 584, in init
-    self.do_init()
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\relationships.py", line 1644, in do_init
-    self._setup_join_conditions()
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\relationships.py", line 1884, in _setup_join_conditions
-    self._join_condition = jc = JoinCondition(
-                                ^^^^^^^^^^^^^^
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\relationships.py", line 2310, in __init__
-    self._determine_joins()
-  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\sqlalchemy\orm\relationships.py", line 2467, in _determine_joins
-    raise sa_exc.AmbiguousForeignKeysError(
-sqlalchemy.exc.AmbiguousForeignKeysError: Could not determine join condition between parent/child tables on relationship Localidade.canoas - there are multiple foreign key paths linking the tables.  Specify the 'foreign_keys' argument, providing a list of those columns which should be counted as containing a foreign key reference to the parent table.
-[2024-04-17 19:31:15,590] INFO _log() L96   127.0.0.1 - - [17/Apr/2024 19:31:15] "[35m[1mGET /por-municipio?municipio=Rio%20de%20Janeiro HTTP/1.1[0m" 500 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-17 19:32:51,079] INFO _log() L96    * Detected change in 'C:\\Users\\ff_rj\\Documents\\Backend VAAlugar\\VAAlugar-back\\model\\canoa.py', reloading - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-17 19:32:51,245] INFO _log() L96    * Restarting with stat - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-17 19:33:05,786] INFO _log() L96   127.0.0.1 - - [17/Apr/2024 19:33:05] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-17 19:33:05,940] INFO _log() L96   127.0.0.1 - - [17/Apr/2024 19:33:05] "[36mGET /openapi/static/js/swagger-ui-bundle.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-17 19:33:05,954] INFO _log() L96   127.0.0.1 - - [17/Apr/2024 19:33:05] "[36mGET /openapi/static/js/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
-[2024-04-17 19:33:05,968] INFO _log() L96   127.0.0.1 - - [17/Apr/2024 19:33:05] "[36mGET /openapi/static/css/swagger-ui.css HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\flask\app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\flask\app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\flask\app.py", line 1174, in make_response
+    raise TypeError(
+TypeError: The view function for 'get_reservas_por_telefone' did not return a valid response. The function either returned None or ended without a return statement.
+[2024-04-17 20:05:28,176] INFO _log() L96   127.0.0.1 - - [17/Apr/2024 20:05:28] "[35m[1mGET /reserva-telefone?telefone=21999999999 HTTP/1.1[0m" 500 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-17 20:10:02,493] INFO _log() L96   [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.18:5000 - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-17 20:10:02,494] INFO _log() L96   [33mPress CTRL+C to quit[0m - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-17 20:10:02,497] INFO _log() L96    * Restarting with stat - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-17 20:10:07,658] INFO _log() L96   127.0.0.1 - - [17/Apr/2024 20:10:07] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-17 20:10:07,825] INFO _log() L96   127.0.0.1 - - [17/Apr/2024 20:10:07] "[36mGET /openapi/static/js/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-17 20:10:07,845] INFO _log() L96   127.0.0.1 - - [17/Apr/2024 20:10:07] "[36mGET /openapi/static/css/swagger-ui.css HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-17 20:10:07,852] INFO _log() L96   127.0.0.1 - - [17/Apr/2024 20:10:07] "[36mGET /openapi/static/js/swagger-ui-bundle.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-17 20:10:08,006] INFO _log() L96   127.0.0.1 - - [17/Apr/2024 20:10:08] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-17 20:10:08,075] INFO _log() L96   127.0.0.1 - - [17/Apr/2024 20:10:08] "[36mGET /openapi/static/images/swagger.svg HTTP/1.1[0m" 304 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-17 20:10:12,606] ERROR log_exception() L838  Exception on /reserva-telefone [GET] - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\flask\app.py L838 
+Traceback (most recent call last):
+  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\flask\app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\flask\app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\flask\app.py", line 1174, in make_response
+    raise TypeError(
+TypeError: The view function for 'get_reservas_por_telefone' did not return a valid response. The function either returned None or ended without a return statement.
+[2024-04-17 20:10:12,610] INFO _log() L96   127.0.0.1 - - [17/Apr/2024 20:10:12] "[35m[1mGET /reserva-telefone?telefone=21999999999 HTTP/1.1[0m" 500 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-17 20:11:21,927] INFO _log() L96   127.0.0.1 - - [17/Apr/2024 20:11:21] "POST /reserva HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-17 20:11:37,642] INFO _log() L96   127.0.0.1 - - [17/Apr/2024 20:11:37] "POST /reserva HTTP/1.1" 200 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-17 20:11:56,955] ERROR log_exception() L838  Exception on /reserva-telefone [GET] - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\flask\app.py L838 
+Traceback (most recent call last):
+  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\flask\app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\flask\app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\flask\app.py", line 1174, in make_response
+    raise TypeError(
+TypeError: The view function for 'get_reservas_por_telefone' did not return a valid response. The function either returned None or ended without a return statement.
+[2024-04-17 20:11:56,958] INFO _log() L96   127.0.0.1 - - [17/Apr/2024 20:11:56] "[35m[1mGET /reserva-telefone?telefone=21994497881 HTTP/1.1[0m" 500 - - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
+[2024-04-17 20:12:36,479] INFO _log() L96    * Detected change in 'C:\\Users\\ff_rj\\Documents\\Backend VAAlugar\\VAAlugar-back\\schemas\\reservas.py', reloading - call_trace=C:\Users\ff_rj\Documents\Backend VAAlugar\VAAlugar-back\env\Lib\site-packages\werkzeug\_internal.py L96  
