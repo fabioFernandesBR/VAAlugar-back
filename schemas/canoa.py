@@ -7,6 +7,7 @@ class SchemaCanoa(BaseModel):
     """ Define como uma nova canoa a ser inserida deve ser representada.
         Obs.: não faz parte do escopo do app inserir canoas via API. No entanto uso esta classe como entrada para outras classes.
     """
+    id: int = 1 ###
     nome: str = "Moana"
     tipo: str = "OC6"
     dono: str = "Bravus" 

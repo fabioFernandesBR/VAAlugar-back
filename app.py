@@ -89,8 +89,8 @@ def get_canoas_por_municipio(query: SchemaBuscaCanoaPorMunicipio):
     # criando conexão com a base
     session = Session()
     # fazendo a busca
-    locais = session.query(Localidade).filter(Localidade.municipio == local_buscado).all()
-    canoas = session.query(Canoa).filter(Canoa.local in locais).all()
+    #locais = session.query(Localidade).filter(Localidade.municipio == local_buscado).all()
+    canoas = session.query(Canoa).join(Localidade).filter(Localidade.municipio == local_buscado).all()
 
     if not canoas:
         # se a canoa não foi encontrada
