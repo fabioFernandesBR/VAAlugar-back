@@ -7,7 +7,7 @@ class SchemaCanoa(BaseModel):
     """ Define como uma nova canoa a ser inserida deve ser representada.
         Obs.: não faz parte do escopo do app inserir canoas via API. No entanto uso esta classe como entrada para outras classes.
     """
-    id: int = 1 ###
+    # id: int = 1 ### não faz sentido criar informando id, afinal o próprio SQLite cria as chaves primárias sequencialmente para esta tabela
     nome: str = "Moana"
     tipo: str = "OC6"
     dono: str = "Bravus" 
@@ -48,7 +48,7 @@ class SchemaVisualizacaoCanoas(BaseModel):
 
 def apresenta_canoa(canoa: Canoa):
     """ Retorna uma representação do produto seguindo o schema definido em
-        SchemaListagemCanoas.
+        SchemaVisualizacaoCanoas.
     """
     return {
         "id": canoa.id,

@@ -4,7 +4,7 @@ from urllib.parse import unquote
 
 from sqlalchemy.exc import IntegrityError
 
-from model import Session, Canoa, Localidade
+from model import Session, Canoa, Localidade, Reserva
 from logger import logger
 from schemas import *
 
@@ -16,9 +16,10 @@ CORS(app)
 
 # definindo tags
 home_tag = Tag(name="Documentação", description="Seleção de documentação: Swagger, Redoc ou RapiDoc")
-canoa_tag = Tag(name="Canoa", description="Busca de canoas")
+canoa_tag = Tag(name="Canoas", description="Busca de canoas")
 local_tag = Tag(name = "Local", description = "Busca de locais para remar!")
-#comentario_tag = Tag(name="Comentario", description="Adição de um comentário à um produtos cadastrado na base")
+reserva_tag = Tag(name = "Reserva", description = "Reservas de canoas para locação")
+comentarios_tag = Tag(name="Comentarios e Avaliações", description="Comentários e Avaliações das experiencia de locação e uso das canoas")
 
 
 @app.get('/', tags=[home_tag])
@@ -27,6 +28,7 @@ def home():
     """
     return redirect('/openapi')
 
+# setor das canoas
 @app.get('/canoas', tags=[canoa_tag],
          responses={"200": SchemaListagemCanoas, "404": SchemaMensagemErro})
 def get_canoas():
@@ -103,7 +105,7 @@ def get_canoas_por_municipio(query: SchemaBuscaCanoaPorMunicipio):
         return apresenta_canoas(canoas), 200
 
 
-
+# setor dos locais
 @app.get('/locais', tags=[local_tag],
          responses={"200": SchemaListagemLocalidades, "404": SchemaMensagemErro})
 def get_locais():
@@ -151,3 +153,33 @@ def get_localidades_por_tipo(query: SchemaBuscaLocalidadePorMunicipio):
         logger.debug(f"Localidades encontradas em: '{cidade}'")
         # retorna a representação de produto
         return apresenta_localidades(localidades), 200
+    
+
+# setor das reservas
+@app.post('/reserva', tags=[reserva_tag],
+          responses={"200": SchemaReserva, "409": ErrorSchema, "400": ErrorSchema})
+def cria_reserva(form: SchemaCriacaoReserva):
+    """Cria uma reserva
+
+    Retorna uma representação da reserva criada. Neste momento, ainda não temos comentário nem avaliação.
+    """
+    reserva = Reserva(
+        usuario=form.usuario,
+        canoa=form.canoa,
+        data=form.data)
+    logger.debug(f"Adicionando reserva: '{reserva.canoa}'")
+    try:
+        # criando conexão com a base
+        session = Session()
+        # adicionando reserva
+        session.add(reserva)
+        # efetivando o comando de criação da reserva na tabela
+        session.commit()
+        logger.debug(f"Reserva criada: '{reserva.canoa}'")
+        return apresenta_reserva(reserva), 200
+
+    except Exception as e:
+        # caso um erro fora do previsto
+        error_msg = "Não foi possível criar reserva :/"
+        logger.warning(f"Erro ao adicionar produto '{produto.nome}', {error_msg}")
+        return {"message": error_msg}, 400
