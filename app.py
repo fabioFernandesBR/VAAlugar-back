@@ -76,6 +76,34 @@ def get_canoas_por_tipo(query: SchemaBuscaCanoaPorTipo):
         return apresenta_canoas(canoas), 200
 
 
+@app.get('/por-municipio', tags=[canoa_tag],
+         responses={"200": SchemaListagemCanoas, "404": SchemaMensagemErro})
+def get_canoas_por_municipio(query: SchemaBuscaCanoaPorMunicipio):
+    """
+    # Faz a busca por canoas a partir do MUNICIPIO
+
+    # Retorna uma representação das canoas que localizadas neste município.
+    """
+    local_buscado = query.municipio
+    logger.debug(f"Coletando dados sobre canoas em #{local_buscado}")
+    # criando conexão com a base
+    session = Session()
+    # fazendo a busca
+    locais = session.query(Localidade).filter(Localidade.municipio == local_buscado).all()
+    canoas = session.query(Canoa).filter(Canoa.local in locais).all()
+
+    if not canoas:
+        # se a canoa não foi encontrada
+        error_msg = "nenhuma canoa encontrada nesta cidade :/"
+        logger.warning(f"Erro ao buscar canoa em '{local_buscado}', {error_msg}")
+        return {"message": error_msg}, 404
+    else:
+        logger.debug(f"Canoas encontradas em: '{local_buscado}'")
+        # retorna a representação de produto
+        return apresenta_canoas(canoas), 200
+
+
+
 @app.get('/locais', tags=[local_tag],
          responses={"200": SchemaListagemLocalidades, "404": SchemaMensagemErro})
 def get_locais():

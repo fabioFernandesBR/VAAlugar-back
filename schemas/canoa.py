@@ -3,13 +3,6 @@ from typing import Optional, List
 from model.canoa import Canoa
 
 
-class SchemaBuscaCanoaPorTipo(BaseModel):
-    """ Define como deve ser a estrutura que representa a busca. 
-        Que será feita apenas com base no TIPO de canoa.
-    """
-    tipo: str = "OC6" #Por padrão, sugiro buscar OC6
-
-
 class SchemaCanoa(BaseModel):
     """ Define como uma nova canoa a ser inserida deve ser representada.
         Obs.: não faz parte do escopo do app inserir canoas via API. No entanto uso esta classe como entrada para outras classes.
@@ -19,6 +12,21 @@ class SchemaCanoa(BaseModel):
     dono: str = "Bravus" 
     telefone: int = 21999999998 
     local: int = 1
+
+class SchemaBuscaCanoaPorTipo(BaseModel):
+    """ Define como deve ser a estrutura que representa a busca. 
+        Que será feita apenas com base no TIPO de canoa.
+    """
+    tipo: str = "OC6" #Por padrão, sugiro buscar OC6
+
+
+class SchemaBuscaCanoaPorMunicipio(BaseModel):
+    """ Define como deve ser a estrutura que representa a busca. 
+        Que será feita apenas com base no MUNICIPIO onde está localizada a canoa.
+    """
+    municipio: str = "Rio de Janeiro" #Por padrão, sugiro buscar OC6
+
+
 
 
 class SchemaListagemCanoas(BaseModel):
