@@ -27,15 +27,6 @@ class SchemaBuscaCanoaPorMunicipio(BaseModel):
     """
     municipio: str = "Rio de Janeiro" #Por padrão, sugiro buscar Rio de Janeiro
 
-
-
-
-class SchemaListagemCanoas(BaseModel):
-    """ Define como uma listagem de canoas será retornada.
-    """
-    canoas:List[SchemaCanoa]
-
-
 class SchemaVisualizacaoCanoas(BaseModel): ## modificação para incluir dados da localidade
     """ Define como uma canoa será retornada, incluindo informações do local onde está localizada.
     """
@@ -45,9 +36,15 @@ class SchemaVisualizacaoCanoas(BaseModel): ## modificação para incluir dados d
     dono: str = "Bravus" 
     telefone: int = 21999999998 
     local: int = 1
-    municipio: Optional[str] = None
-    bairro: Optional[str] = None
-    referencia: Optional[str] = None
+    estado: Optional[str] = "RJ" 
+    municipio: Optional[str] = "Rio de Janeiro"
+    bairro: Optional[str] = "Recreio"
+    referencia: Optional[str] = "Posto 12 - Pedra do Pontal"
+
+class SchemaListagemCanoas(BaseModel): 
+    """ Define como uma listagem de canoas será retornada.
+    """
+    canoas:List[SchemaVisualizacaoCanoas]
 
 def apresenta_canoa(canoa: Canoa):
     """ Retorna uma representação do produto seguindo o schema definido em
@@ -58,19 +55,20 @@ def apresenta_canoa(canoa: Canoa):
         "nome": canoa.nome,
         "tipo": canoa.tipo,
         "dono": canoa.dono,
-        "telefone": canoa.telefone,
+        "telefone": canoa.telefone, 
         "local": canoa.local
+        
        
     }
 
-def apresenta_canoas(canoas: List[Canoa]):
+def apresenta_canoas(canoas: List[Canoa]):  ## modificação para incluir dados da localidade
     """ Retorna uma representação da canoa seguindo o schema definido em
         SchemaListagemCanoas.
     """
     result = []
     for canoa in canoas:
         result.append({
-           "id": canoa.id,
+            "id": canoa.id,
             "nome": canoa.nome,
             "tipo": canoa.tipo,
             "dono": canoa.dono,

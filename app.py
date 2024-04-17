@@ -91,8 +91,9 @@ def get_canoas_por_municipio(query: SchemaBuscaCanoaPorMunicipio):
     # criando conexão com a base
     session = Session()
     # fazendo a busca
-    #locais = session.query(Localidade).filter(Localidade.municipio == local_buscado).all()
+    
     canoas = session.query(Canoa).join(Localidade).filter(Localidade.municipio == local_buscado).all()
+    print(canoas)
 
     if not canoas:
         # se a canoa não foi encontrada
@@ -188,3 +189,28 @@ def cria_reserva(form: SchemaCriacaoReserva):
 
 
 
+
+@app.get('/reserva-telefone', tags=[reserva_tag],
+         responses={"200": SchemaListagemReservas, "404": SchemaMensagemErro})
+def get_reservas_por_telefone(query: SchemaBuscaReservaPorTelefone):
+    """
+    # Faz a busca por reservas a partir do TELEFONE
+
+    # Retorna uma representação das reservas feitas por um determinado usuario, assumindo que o telefone é a chave primária dos usuarios.
+    """
+    tel = query.telefone
+    logger.debug(f"Coletando dados sobre reservas #{tel}")
+    # criando conexão com a base
+    session = Session()
+    # fazendo a busca
+    reservas = session.query(Reserva).filter(Reserva.usuario == tel).all() 
+
+    if not reservas:
+        
+        error_msg = "Não foram encontradas reservas para este usuario"
+        logger.warning(f"Erro ao buscar reservas para o usuario '{tel}', {error_msg}")
+        return {"message": error_msg}, 404
+    else:
+        logger.debug(f"reservas encontradas: '{tel}'")
+        # retorna a representação de produto
+        return apresenta_reservas(reservas), 200

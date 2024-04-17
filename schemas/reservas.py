@@ -10,7 +10,12 @@ class SchemaCriacaoReserva(BaseModel):
     usuario: int = "21999999999"
     canoa: int = 1
     data: str = "01/05/2024" 
-    
+
+class SchemaBuscaReservaPorTelefone(BaseModel):
+    """ Define como deve ser a estrutura que representa a busca. 
+        Que será feita apenas com base no numero de TELEFONE do usuario.
+    """
+    telefone: int = 21999999999 #Por padrão, sugiro 21999999999    
 
 class SchemaVisualizacaoReserva(BaseModel):
     """ Define como uma nova reserva recém criada deve ser representada, da API para o usuário.
@@ -20,6 +25,12 @@ class SchemaVisualizacaoReserva(BaseModel):
     usuario: int = "21999999999"
     canoa: int = 1
     data: str = "01/05/2024" 
+
+
+class SchemaListagemReservas(BaseModel): 
+    """ Define como uma listagem de canoas será retornada.
+    """
+    reservas:List[SchemaVisualizacaoReserva]
 
 def apresenta_reserva(reserva: Reserva):
     """ Retorna uma representação da reserva seguindo o schema definido em
@@ -31,3 +42,16 @@ def apresenta_reserva(reserva: Reserva):
         "canoa": reserva.canoa,
         "data": reserva.data      
     }
+
+def apresenta_reservas(reservas: list[Reserva]):
+    """ Retorna uma representação das reserva seguindo o schema definido em
+        SchemaListagemReservas.
+    """
+    result = []
+    for reserva in reservas:
+        result.append({
+            "id-reserva": reserva.id,
+            "usuario": reserva.usuario,
+            "canoa": reserva.canoa,
+            "data": reserva.data  
+        })
