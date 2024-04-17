@@ -25,7 +25,7 @@ class SchemaBuscaCanoaPorMunicipio(BaseModel):
     """ Define como deve ser a estrutura que representa a busca. 
         Que será feita apenas com base no MUNICIPIO onde está localizada a canoa.
     """
-    municipio: str = "Rio de Janeiro" #Por padrão, sugiro buscar OC6
+    municipio: str = "Rio de Janeiro" #Por padrão, sugiro buscar Rio de Janeiro
 
 
 
@@ -36,8 +36,8 @@ class SchemaListagemCanoas(BaseModel):
     canoas:List[SchemaCanoa]
 
 
-class SchemaVisualizacaoCanoas(BaseModel):
-    """ Define como uma canoa será retornada.
+class SchemaVisualizacaoCanoas(BaseModel): ## modificação para incluir dados da localidade
+    """ Define como uma canoa será retornada, incluindo informações do local onde está localizada.
     """
     id: int = 1
     nome: str = "Moana"
@@ -45,6 +45,9 @@ class SchemaVisualizacaoCanoas(BaseModel):
     dono: str = "Bravus" 
     telefone: int = 21999999998 
     local: int = 1
+    municipio: Optional[str] = None
+    bairro: Optional[str] = None
+    referencia: Optional[str] = None
 
 def apresenta_canoa(canoa: Canoa):
     """ Retorna uma representação do produto seguindo o schema definido em
