@@ -1,4 +1,8 @@
 # VAAlugar-back
+Para executar:
+flask run --host 0.0.0.0 --port 5000 --reload
+
+
 Back End do projeto VA'Alugar
 
 Sprint Desenvolvimento Full Stack Básico da Especialização em Engenharia de Software da PUC Rio.

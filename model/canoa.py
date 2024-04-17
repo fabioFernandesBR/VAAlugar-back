@@ -1,4 +1,5 @@
 from sqlalchemy import Column, String, Integer, ForeignKey
+from sqlalchemy.orm import relationship
 from  model import Base
 
 
@@ -16,6 +17,11 @@ class Canoa(Base):
     # a referencia a localidade, a chave estrangeira que relaciona
     # uma canoa ao seu local.
     local = Column("idlocais", Integer, ForeignKey("locais.idlocais"), nullable=True)
+    
+    # Definição do relacionamento entre uma canoa e sua reserva.
+    # Esse relacionamento não está na tabela "canoas", mas a tabela "reservas" faz uma referência à tabela canoas, por meio de uma chave estrangeira.
+    # O SQLAlchemy fará esse relacionamento.    
+    reserva = relationship("Reserva")
 
     def __init__(self, nome, tipo, dono, telefone, local):
         """

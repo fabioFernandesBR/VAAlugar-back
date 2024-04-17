@@ -15,18 +15,18 @@ app = OpenAPI(__name__, info=info)
 CORS(app)
 
 # definindo tags
-home_tag = Tag(name="Documentação", description="Seleção de documentação: Swagger, Redoc ou RapiDoc")
 canoa_tag = Tag(name="Canoas", description="Busca de canoas")
 local_tag = Tag(name = "Local", description = "Busca de locais para remar!")
 reserva_tag = Tag(name = "Reserva", description = "Reservas de canoas para locação")
 comentarios_tag = Tag(name="Comentarios e Avaliações", description="Comentários e Avaliações das experiencia de locação e uso das canoas")
+home_tag = Tag(name="Documentação", description="Seleção de documentação: Swagger, Redoc ou RapiDoc")
 
-
-@app.get('/', tags=[home_tag])
+@app.get('/', tags = [home_tag])
 def home():
     """Redireciona para /openapi, tela que permite a escolha do estilo de documentação.
     """
     return redirect('/openapi')
+
 
 # setor das canoas
 @app.get('/canoas', tags=[canoa_tag],
@@ -157,7 +157,7 @@ def get_localidades_por_tipo(query: SchemaBuscaLocalidadePorMunicipio):
 
 # setor das reservas
 @app.post('/reserva', tags=[reserva_tag],
-          responses={"200": SchemaReserva, "409": ErrorSchema, "400": ErrorSchema})
+          responses={"200": SchemaVisualizacaoReserva, "409": SchemaMensagemErro, "400": SchemaMensagemErro})
 def cria_reserva(form: SchemaCriacaoReserva):
     """Cria uma reserva
 
@@ -166,8 +166,10 @@ def cria_reserva(form: SchemaCriacaoReserva):
     reserva = Reserva(
         usuario=form.usuario,
         canoa=form.canoa,
-        data=form.data)
-    logger.debug(f"Adicionando reserva: '{reserva.canoa}'")
+        data=form.data,
+        comentario=None,
+        avaliacao=None)
+    logger.debug(f"Adicionando reserva")
     try:
         # criando conexão com a base
         session = Session()
@@ -180,6 +182,9 @@ def cria_reserva(form: SchemaCriacaoReserva):
 
     except Exception as e:
         # caso um erro fora do previsto
-        error_msg = "Não foi possível criar reserva :/"
-        logger.warning(f"Erro ao adicionar produto '{produto.nome}', {error_msg}")
+        error_msg = f"Não foi possível criar reserva : {e}"
+        logger.warning(f"Erro ao criar reserva, {error_msg}")
         return {"message": error_msg}, 400
+
+
+

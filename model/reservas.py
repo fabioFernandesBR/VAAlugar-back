@@ -10,8 +10,8 @@ class Reserva(Base):
 
     id = Column("reserva", Integer, primary_key = True)
     data = Column(String(50))
-    comentario = Column(String(280))
-    avaliacao = Column(Integer)
+    comentario = Column(String(280), nullable=True)
+    avaliacao = Column(Integer, nullable=True)
     
     # Definição do relacionamento entre a reserva e a canoa que está sendo reservada.
     canoa = Column(Integer, ForeignKey("canoas.idcanoas"), nullable=False)
@@ -20,7 +20,7 @@ class Reserva(Base):
     usuario = Column(Integer, ForeignKey("usuarios.telefone"), nullable=False)
 
 
-    def __init__(self, usuario, canoa, data, comentario, avaliacao):
+    def __init__(self, usuario, canoa, data, comentario = None, avaliacao = None):
         """
         Cria uma Reserva!
 

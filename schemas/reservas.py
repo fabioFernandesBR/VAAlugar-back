@@ -16,7 +16,7 @@ class SchemaVisualizacaoReserva(BaseModel):
     """ Define como uma nova reserva recém criada deve ser representada, da API para o usuário.
         Obs.: no momento do uso deste Schema, estamos fazendo a reserva, com usuario, canoa e data. Comentario e avaliação serão submetidos em um momento posterior.
     """
-    id: int = 1
+    id_reserva: int = 1
     usuario: int = "21999999999"
     canoa: int = 1
     data: str = "01/05/2024" 
@@ -26,7 +26,7 @@ def apresenta_reserva(reserva: Reserva):
         SchemaVisualizacaoReserva.
     """
     return {
-        "id": reserva.id,
+        "id-reserva": reserva.id,
         "usuario": reserva.usuario,
         "canoa": reserva.canoa,
         "data": reserva.data      

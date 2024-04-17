@@ -8,6 +8,7 @@ from model.base import Base
 from model.canoa import Canoa
 from model.localidade import Localidade
 from model.reservas import Reserva
+from model.usuarios import Usuario
 
 db_path = "database/"
 # Verifica se o diretorio não existe
