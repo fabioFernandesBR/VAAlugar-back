@@ -164,13 +164,14 @@ def cria_reserva(form: SchemaCriacaoReserva):
 
     Retorna uma representação da reserva criada. Neste momento, ainda não temos comentário nem avaliação.
     """
+    logger.debug(f"Recebido dados para criação de reserva: {form}")
     reserva = Reserva(
         usuario=form.usuario,
         canoa=form.canoa,
         data=form.data,
         comentario=None,
         avaliacao=None)
-    logger.debug(f"Adicionando reserva")
+    logger.debug(f"Reserva criada: {reserva}")
     try:
         # criando conexão com a base
         session = Session()
@@ -178,7 +179,7 @@ def cria_reserva(form: SchemaCriacaoReserva):
         session.add(reserva)
         # efetivando o comando de criação da reserva na tabela
         session.commit()
-        logger.debug(f"Reserva criada: '{reserva.canoa}'")
+        logger.debug(f"Reserva persistida no banco de dados: {reserva}")
         return apresenta_reserva(reserva), 200
 
     except Exception as e:
