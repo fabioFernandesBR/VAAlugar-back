@@ -214,3 +214,36 @@ def get_reservas_por_telefone(query: SchemaBuscaReservaPorTelefone):
         logger.debug(f"reservas encontradas: '{tel}'")
         # retorna a representação de produto
         return apresenta_reservas(reservas), 200
+    
+
+
+@app.put('/comentario', tags=[comentarios_tag],
+          responses={"200": SchemaRespostaComentario, "409": SchemaMensagemErro, "400": SchemaMensagemErro})
+def atualiza_reserva(form: SchemaGetComentario):
+    """Atualiza uma reserva, inserindo comentario e avaliacao
+
+    Retorna uma representação da reserva criada. Neste momento, já temos comentário e avaliação.
+    """
+    try:
+        # criando conexão com a base
+        session = Session()
+        # recuperando a reserva existente pelo id
+        reserva = session.query(Reserva).get(form.id_reserva)
+        
+        if reserva:
+            # atualizando os atributos da reserva
+            reserva.comentario = form.comentario
+            reserva.avaliacao = form.avaliacao
+
+            # efetivando o comando de atualização da reserva na tabela
+            session.commit()
+            logger.debug(f"Reserva atualizada: '{reserva.id}'")
+            return apresenta_reserva(reserva), 200
+        else:
+            return {"message": "Reserva não encontrada"}, 404
+
+    except Exception as e:
+        # caso um erro fora do previsto
+        error_msg = f"Não foi possível atualizar reserva : {e}"
+        logger.warning(f"Erro ao atualizar reserva, {error_msg}")
+        return {"message": error_msg}, 400

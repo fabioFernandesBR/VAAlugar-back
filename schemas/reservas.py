@@ -7,7 +7,7 @@ class SchemaCriacaoReserva(BaseModel):
     """ Define como uma nova reserva a ser criada deve ser representada, do usuário para a API.
         Obs.: no momento do uso deste Schema, estamos fazendo a reserva, com usuario, canoa e data. Comentario e avaliação serão submetidos em um momento posterior.
     """
-    usuario: int = "21999999999"
+    usuario: int = 21999999999
     canoa: int = 1
     data: str = "01/05/2024" 
 
@@ -22,15 +22,36 @@ class SchemaVisualizacaoReserva(BaseModel):
         Obs.: no momento do uso deste Schema, estamos fazendo a reserva, com usuario, canoa e data. Comentario e avaliação serão submetidos em um momento posterior.
     """
     id_reserva: int = 1
-    usuario: int = "21999999999"
+    usuario: int = 21999999999
     canoa: int = 1
-    data: str = "01/05/2024" 
+    data: str = "01/05/2024"
+    comentario: str = "Topperson"
+    avaliacao: int = 5
 
 
 class SchemaListagemReservas(BaseModel): 
     """ Define como uma listagem de canoas será retornada.
     """
     reservas:List[SchemaVisualizacaoReserva]
+
+class SchemaGetComentario(BaseModel):
+    """ Atualiza uma reserva, incluindo comentario e avaliacao
+    """
+    id_reserva: int = 1
+    comentario: str = "Topperson"
+    avaliacao: int = 5
+
+class SchemaRespostaComentario(BaseModel):
+    """ Para confirmar a atualizacao da reserva com o comentario e a avaliacao
+    """
+    id_reserva: int = 1
+    usuario: int = 21999999999
+    canoa: int = 1
+    data: str = "01/05/2024"
+    comentario: str = "Topperson"
+    avaliacao: int = 5
+
+
 
 def apresenta_reserva(reserva: Reserva):
     """ Retorna uma representação da reserva seguindo o schema definido em
@@ -40,7 +61,7 @@ def apresenta_reserva(reserva: Reserva):
         "id-reserva": reserva.id,
         "usuario": reserva.usuario,
         "canoa": reserva.canoa,
-        "data": reserva.data      
+        "data": reserva.data    
     }
 
 def apresenta_reservas(reservas: list[Reserva]):
@@ -55,3 +76,5 @@ def apresenta_reservas(reservas: list[Reserva]):
             "canoa": reserva.canoa,
             "data": reserva.data  
         })
+
+    return {"reservas": result}

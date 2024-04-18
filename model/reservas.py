@@ -31,6 +31,7 @@ class Reserva(Base):
             comentario: o que o usuario achou da experiencia
             avaliacao: nota de 1 a 5
         """
+        #self.id = id
         self.usuario = usuario
         self.canoa = canoa
         self.data = data
