@@ -26,7 +26,7 @@ class Canoa(Base):
     reserva = relationship("Reserva")
     
 
-    def __init__(self, nome, tipo, dono, telefone, local):
+    def __init__(self, nome, tipo, dono, telefone, local, estado=None, municipio=None, bairro=None, referencia=None):
         
         # Cria uma Canoa!
 
@@ -42,4 +42,11 @@ class Canoa(Base):
         self.dono = dono
         self.telefone = telefone
         self.local = local
+
+        # Atributos adicionais - para referenciar localidade
+        self.estado = estado
+        self.municipio = municipio
+        self.bairro = bairro
+        self.referencia = referencia
+
 

@@ -61,7 +61,9 @@ def apresenta_reserva(reserva: Reserva):
         "id-reserva": reserva.id,
         "usuario": reserva.usuario,
         "canoa": reserva.canoa,
-        "data": reserva.data    
+        "data": reserva.data,
+        "comentario": reserva.comentario,
+        "avaliacao": reserva.avaliacao    
     }
 
 def apresenta_reservas(reservas: list[Reserva]):
@@ -71,10 +73,12 @@ def apresenta_reservas(reservas: list[Reserva]):
     result = []
     for reserva in reservas:
         result.append({
-            "id-reserva": reserva.id,
+            "id_reserva": reserva.id,
             "usuario": reserva.usuario,
             "canoa": reserva.canoa,
-            "data": reserva.data  
+            "data": reserva.data,
+            "comentario": reserva.comentario,
+            "avaliacao": reserva.avaliacao
         })
 
     return {"reservas": result}

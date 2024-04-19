@@ -61,10 +61,10 @@ def apresenta_canoa(canoa: Canoa):
        
     }
 
-def apresenta_canoas(canoas: List[Canoa]):  ## modificação para incluir dados da localidade
-    """ Retorna uma representação da canoa seguindo o schema definido em
-        SchemaListagemCanoas.
-    """
+def apresenta_canoas(canoas: List[Canoa]):
+    #Retorna uma representação da canoa seguindo o schema definido em
+    #SchemaListagemCanoas.
+    
     result = []
     for canoa in canoas:
         result.append({
@@ -74,6 +74,28 @@ def apresenta_canoas(canoas: List[Canoa]):  ## modificação para incluir dados 
             "dono": canoa.dono,
             "telefone": canoa.telefone,
             "local": canoa.local
+        })
+
+    return {"canoas": result}
+
+
+def apresenta_canoas_e_localidades(canoas: List[Canoa]):  ## modificação para incluir dados da localidade
+    #Retorna uma representação da canoa seguindo o schema definido em
+    #SchemaListagemCanoas.
+    
+    result = []
+    for canoa in canoas:
+        result.append({
+            "id": canoa.id,
+            "nome": canoa.nome,
+            "tipo": canoa.tipo,
+            "dono": canoa.dono,
+            "telefone": canoa.telefone,
+            "local": canoa.local,
+            "estado": canoa.estado,
+            "municipio": canoa.municipio,
+            "bairro": canoa.bairro,
+            "referencia": canoa.referencia
         })
 
     return {"canoas": result}
