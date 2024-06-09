@@ -14,7 +14,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Exponha a porta que a aplicação vai rodar (ajuste conforme necessário)
-EXPOSE 8000
+ENV HOST 0.0.0.0
+ENV PORT 8000
+
+EXPOSE ${PORT}
 
 # Comando para rodar a aplicação
-CMD ["python", "app.py"]
+CMD ["univorn", "app:app", "--host", "${HOST}}", "--port", "${PORT}}"]
