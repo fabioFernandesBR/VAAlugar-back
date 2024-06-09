@@ -20,4 +20,4 @@ ENV PORT 8000
 EXPOSE ${PORT}
 
 # Comando para rodar a aplicação
-CMD ["univorn", "app:app", "--host", "${HOST}}", "--port", "${PORT}}"]
+CMD ["gunicorn", "app:app", "--host", "${HOST}}", "--port", "${PORT}}"]
